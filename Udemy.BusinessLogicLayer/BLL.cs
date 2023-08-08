@@ -78,7 +78,7 @@ namespace Udemy.BusinessLogicLayer
         }
         public int KayitSil(Guid ID)
         {
-            if(ID != Guid.Empty) 
+            if (ID != Guid.Empty)
             {
                 return dll.KayitSil(ID);
             }
@@ -93,7 +93,7 @@ namespace Udemy.BusinessLogicLayer
             try
             {
                 SqlDataReader reader = dll.KayitListe();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     RehberListesi.Add(new Rehber()
                     {
@@ -103,11 +103,11 @@ namespace Udemy.BusinessLogicLayer
                         TelefonNumarasiI = reader.IsDBNull(3) ? string.Empty : reader.GetString(3),
                         TelefonNumarasiII = reader.IsDBNull(4) ? string.Empty : reader.GetString(4),
                         TelefonNumarasiIII = reader.IsDBNull(5) ? string.Empty : reader.GetString(5),
-                        EmailAdres = reader.IsDBNull(6)? string.Empty : reader.GetString(6),
-                        WebAdres = reader.IsDBNull(7)? string.Empty: reader.GetString(7),
-                        Adres = reader.IsDBNull(8)? string.Empty : reader.GetString(8),
-                        Aciklama = reader.IsDBNull(9)? string.Empty: reader.GetString(9),
-                    }); ;
+                        EmailAdres = reader.IsDBNull(6) ? string.Empty : reader.GetString(6),
+                        WebAdres = reader.IsDBNull(7) ? string.Empty : reader.GetString(7),
+                        Adres = reader.IsDBNull(8) ? string.Empty : reader.GetString(8),
+                        Aciklama = reader.IsDBNull(9) ? string.Empty : reader.GetString(9),
+                    });
                 }
                 reader.Close();
             }
@@ -154,6 +154,46 @@ namespace Udemy.BusinessLogicLayer
                 dll.BaglantiAyarla();
             }
             return RehberKayit;
+        }
+        public int KullaniciEkle(string kullaniciAdi, string sifre, Guid id)
+        {
+            if (!string.IsNullOrEmpty(kullaniciAdi) && !string.IsNullOrEmpty(sifre) )
+            {
+                return dll.KullaniciEkle(kullaniciAdi, sifre, id);
+            }
+            else
+            {
+                return -1;
+            }
+
+        }
+        public List<Kullanici> KullaniciKayitListe()
+        {
+            List<Kullanici> KullaniciListe = new List<Kullanici>();
+            SqlDataReader reader = dll.KullaniciKayitListe();
+            try
+            {
+                while (reader.Read())
+                {
+                    KullaniciListe.Add(new Kullanici()
+                    {
+                        ID = reader.IsDBNull(0) ? Guid.Empty : reader.GetGuid(0),
+                        KullaniciAdi = reader.IsDBNull(1) ? string.Empty : reader.GetString(1),
+                        Sifre = reader.IsDBNull(2) ? string.Empty : reader.GetString(2),
+                    });
+                }
+                reader.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                dll.BaglantiAyarla();
+            }
+            return KullaniciListe;
+
         }
 
     }

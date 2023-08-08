@@ -32,5 +32,16 @@ namespace Udemy.TelefonRehberi
                 MessageBox.Show("Hatalı Kullanıcı Adı Veya Şifre Girişi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnKayitOl_Click(object sender, EventArgs e)
+        {
+            KullaniciKayitForm form = new KullaniciKayitForm();
+            form.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

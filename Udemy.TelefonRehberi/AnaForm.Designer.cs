@@ -31,25 +31,28 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstListe = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtYIsim = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtYSoyisim = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtYTelefonI = new System.Windows.Forms.TextBox();
-            this.txtYTelefonII = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.btnYeniKayit = new System.Windows.Forms.Button();
             this.txtYTelefonIII = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtYTelefonII = new System.Windows.Forms.TextBox();
             this.txtYEmailAdres = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtYWebAdres = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtYAdres = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtYSoyisim = new System.Windows.Forms.TextBox();
             this.txtYAciklama = new System.Windows.Forms.TextBox();
+            this.txtYAdres = new System.Windows.Forms.TextBox();
+            this.txtYWebAdres = new System.Windows.Forms.TextBox();
+            this.txtYTelefonI = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtYIsim = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.btnDuzenle = new System.Windows.Forms.Button();
             this.txtGTelefonIII = new System.Windows.Forms.TextBox();
             this.txtGTelefonII = new System.Windows.Forms.TextBox();
             this.txtGEmailAdres = new System.Windows.Forms.TextBox();
@@ -68,9 +71,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.btnYeniKayit = new System.Windows.Forms.Button();
-            this.btnDuzenle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -123,6 +123,162 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Yeni Kayıt Ekleme İşlemi";
             // 
+            // btnYeniKayit
+            // 
+            this.btnYeniKayit.Location = new System.Drawing.Point(94, 209);
+            this.btnYeniKayit.Name = "btnYeniKayit";
+            this.btnYeniKayit.Size = new System.Drawing.Size(792, 23);
+            this.btnYeniKayit.TabIndex = 2;
+            this.btnYeniKayit.Text = "Yeni Kayıt Oluştur";
+            this.btnYeniKayit.UseVisualStyleBackColor = true;
+            this.btnYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
+            // 
+            // txtYTelefonIII
+            // 
+            this.txtYTelefonIII.Location = new System.Drawing.Point(396, 117);
+            this.txtYTelefonIII.Name = "txtYTelefonIII";
+            this.txtYTelefonIII.Size = new System.Drawing.Size(184, 20);
+            this.txtYTelefonIII.TabIndex = 5;
+            // 
+            // txtYTelefonII
+            // 
+            this.txtYTelefonII.Location = new System.Drawing.Point(396, 71);
+            this.txtYTelefonII.Name = "txtYTelefonII";
+            this.txtYTelefonII.Size = new System.Drawing.Size(184, 20);
+            this.txtYTelefonII.TabIndex = 4;
+            // 
+            // txtYEmailAdres
+            // 
+            this.txtYEmailAdres.Location = new System.Drawing.Point(94, 117);
+            this.txtYEmailAdres.Name = "txtYEmailAdres";
+            this.txtYEmailAdres.Size = new System.Drawing.Size(184, 20);
+            this.txtYEmailAdres.TabIndex = 2;
+            // 
+            // txtYSoyisim
+            // 
+            this.txtYSoyisim.Location = new System.Drawing.Point(94, 71);
+            this.txtYSoyisim.Name = "txtYSoyisim";
+            this.txtYSoyisim.Size = new System.Drawing.Size(184, 20);
+            this.txtYSoyisim.TabIndex = 1;
+            // 
+            // txtYAciklama
+            // 
+            this.txtYAciklama.Location = new System.Drawing.Point(94, 148);
+            this.txtYAciklama.Multiline = true;
+            this.txtYAciklama.Name = "txtYAciklama";
+            this.txtYAciklama.Size = new System.Drawing.Size(486, 54);
+            this.txtYAciklama.TabIndex = 8;
+            // 
+            // txtYAdres
+            // 
+            this.txtYAdres.Location = new System.Drawing.Point(702, 71);
+            this.txtYAdres.Multiline = true;
+            this.txtYAdres.Name = "txtYAdres";
+            this.txtYAdres.Size = new System.Drawing.Size(184, 131);
+            this.txtYAdres.TabIndex = 7;
+            // 
+            // txtYWebAdres
+            // 
+            this.txtYWebAdres.Location = new System.Drawing.Point(702, 27);
+            this.txtYWebAdres.Name = "txtYWebAdres";
+            this.txtYWebAdres.Size = new System.Drawing.Size(184, 20);
+            this.txtYWebAdres.TabIndex = 6;
+            // 
+            // txtYTelefonI
+            // 
+            this.txtYTelefonI.Location = new System.Drawing.Point(396, 27);
+            this.txtYTelefonI.Name = "txtYTelefonI";
+            this.txtYTelefonI.Size = new System.Drawing.Size(184, 20);
+            this.txtYTelefonI.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(308, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Telefon III";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(308, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Telefon II";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 151);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Açıklama";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(614, 74);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Adres";
+            // 
+            // txtYIsim
+            // 
+            this.txtYIsim.Location = new System.Drawing.Point(94, 27);
+            this.txtYIsim.Name = "txtYIsim";
+            this.txtYIsim.Size = new System.Drawing.Size(184, 20);
+            this.txtYIsim.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(614, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Web Adres";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(308, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Telefon I";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 120);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Email Adres";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Soyisim";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "İsim";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSil);
@@ -152,151 +308,25 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Seçili Kayıtı Güncelle/Sil";
             // 
-            // label1
+            // btnSil
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "İsim";
+            this.btnSil.Location = new System.Drawing.Point(522, 203);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(377, 23);
+            this.btnSil.TabIndex = 2;
+            this.btnSil.Text = "Kayıt Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
-            // txtYIsim
+            // btnDuzenle
             // 
-            this.txtYIsim.Location = new System.Drawing.Point(94, 27);
-            this.txtYIsim.Name = "txtYIsim";
-            this.txtYIsim.Size = new System.Drawing.Size(184, 20);
-            this.txtYIsim.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Soyisim";
-            // 
-            // txtYSoyisim
-            // 
-            this.txtYSoyisim.Location = new System.Drawing.Point(94, 71);
-            this.txtYSoyisim.Name = "txtYSoyisim";
-            this.txtYSoyisim.Size = new System.Drawing.Size(184, 20);
-            this.txtYSoyisim.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Telefon I";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Telefon II";
-            // 
-            // txtYTelefonI
-            // 
-            this.txtYTelefonI.Location = new System.Drawing.Point(396, 27);
-            this.txtYTelefonI.Name = "txtYTelefonI";
-            this.txtYTelefonI.Size = new System.Drawing.Size(184, 20);
-            this.txtYTelefonI.TabIndex = 1;
-            // 
-            // txtYTelefonII
-            // 
-            this.txtYTelefonII.Location = new System.Drawing.Point(396, 71);
-            this.txtYTelefonII.Name = "txtYTelefonII";
-            this.txtYTelefonII.Size = new System.Drawing.Size(184, 20);
-            this.txtYTelefonII.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(308, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Telefon III";
-            // 
-            // txtYTelefonIII
-            // 
-            this.txtYTelefonIII.Location = new System.Drawing.Point(396, 117);
-            this.txtYTelefonIII.Name = "txtYTelefonIII";
-            this.txtYTelefonIII.Size = new System.Drawing.Size(184, 20);
-            this.txtYTelefonIII.TabIndex = 1;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Email Adres";
-            // 
-            // txtYEmailAdres
-            // 
-            this.txtYEmailAdres.Location = new System.Drawing.Point(94, 117);
-            this.txtYEmailAdres.Name = "txtYEmailAdres";
-            this.txtYEmailAdres.Size = new System.Drawing.Size(184, 20);
-            this.txtYEmailAdres.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(614, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Web Adres";
-            // 
-            // txtYWebAdres
-            // 
-            this.txtYWebAdres.Location = new System.Drawing.Point(702, 27);
-            this.txtYWebAdres.Name = "txtYWebAdres";
-            this.txtYWebAdres.Size = new System.Drawing.Size(184, 20);
-            this.txtYWebAdres.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(614, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Adres";
-            // 
-            // txtYAdres
-            // 
-            this.txtYAdres.Location = new System.Drawing.Point(702, 71);
-            this.txtYAdres.Multiline = true;
-            this.txtYAdres.Name = "txtYAdres";
-            this.txtYAdres.Size = new System.Drawing.Size(184, 131);
-            this.txtYAdres.TabIndex = 1;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 151);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Açıklama";
-            // 
-            // txtYAciklama
-            // 
-            this.txtYAciklama.Location = new System.Drawing.Point(94, 148);
-            this.txtYAciklama.Multiline = true;
-            this.txtYAciklama.Name = "txtYAciklama";
-            this.txtYAciklama.Size = new System.Drawing.Size(486, 54);
-            this.txtYAciklama.TabIndex = 1;
+            this.btnDuzenle.Location = new System.Drawing.Point(107, 203);
+            this.btnDuzenle.Name = "btnDuzenle";
+            this.btnDuzenle.Size = new System.Drawing.Size(377, 23);
+            this.btnDuzenle.TabIndex = 2;
+            this.btnDuzenle.Text = "Kayıt Düzenle";
+            this.btnDuzenle.UseVisualStyleBackColor = true;
+            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
             // 
             // txtGTelefonIII
             // 
@@ -443,36 +473,6 @@
             this.label18.Size = new System.Drawing.Size(25, 13);
             this.label18.TabIndex = 10;
             this.label18.Text = "İsim";
-            // 
-            // btnYeniKayit
-            // 
-            this.btnYeniKayit.Location = new System.Drawing.Point(94, 209);
-            this.btnYeniKayit.Name = "btnYeniKayit";
-            this.btnYeniKayit.Size = new System.Drawing.Size(792, 23);
-            this.btnYeniKayit.TabIndex = 2;
-            this.btnYeniKayit.Text = "Yeni Kayıt Oluştur";
-            this.btnYeniKayit.UseVisualStyleBackColor = true;
-            this.btnYeniKayit.Click += new System.EventHandler(this.btnYeniKayit_Click);
-            // 
-            // btnDuzenle
-            // 
-            this.btnDuzenle.Location = new System.Drawing.Point(107, 203);
-            this.btnDuzenle.Name = "btnDuzenle";
-            this.btnDuzenle.Size = new System.Drawing.Size(377, 23);
-            this.btnDuzenle.TabIndex = 2;
-            this.btnDuzenle.Text = "Kayıt Düzenle";
-            this.btnDuzenle.UseVisualStyleBackColor = true;
-            this.btnDuzenle.Click += new System.EventHandler(this.btnDuzenle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(522, 203);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(377, 23);
-            this.btnSil.TabIndex = 2;
-            this.btnSil.Text = "Kayıt Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // AnaForm
             // 

@@ -69,7 +69,7 @@ namespace Udemy.DatabaseLogicLayer
             try
             {
                 cmd = new SqlCommand("select count(*) from Kullanici where KullaniciAdi = @KullaniciAdi and Sifre = @Sifre", con);
-                cmd.Parameters.Add("@KullaniciAdi",SqlDbType.NVarChar).Value=K.KullaniciAdi;
+                cmd.Parameters.Add("@KullaniciAdi", SqlDbType.NVarChar).Value = K.KullaniciAdi;
                 cmd.Parameters.Add("@Sifre", SqlDbType.NVarChar).Value = K.Sifre;
                 BaglantiAyarla();
                 returnValues = (int)cmd.ExecuteScalar();
@@ -153,12 +153,40 @@ where ID = @ID
             cmd = new SqlCommand("select*from Rehber", con);
             BaglantiAyarla();
             return cmd.ExecuteReader();
+
         }
         public SqlDataReader KayitListeID(Guid ID)
         {
             cmd = new SqlCommand("select*from Rehber where ID = @ID", con);
             cmd.Parameters.Add("@ID", SqlDbType.UniqueIdentifier).Value = ID;
             BaglantiAyarla();
+            return cmd.ExecuteReader();
+        }
+        public int KullaniciEkle(string kullaniciAdi, string sifre, Guid id)
+        {
+            int returnValues = 0;
+            try
+            {
+                cmd = new SqlCommand("insert into Kullanici(KullaniciAdi,Sifre,KullaniciID) values (@KullaniciAdi,@Sifre,@id)", con);
+                cmd.Parameters.Add("@KullaniciAdi", SqlDbType.NVarChar).Value = kullaniciAdi;
+                cmd.Parameters.Add("@Sifre", SqlDbType.NVarChar).Value = sifre;
+                cmd.Parameters.Add("@id", SqlDbType.UniqueIdentifier).Value = id;
+                BaglantiAyarla();
+                returnValues = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                BaglantiAyarla();
+            }
+            return returnValues;
+        }
+        public SqlDataReader KullaniciKayitListe()
+        {
+            cmd = new SqlCommand("select*from Kullanici", con);
+            con.Open();
             return cmd.ExecuteReader();
         }
 

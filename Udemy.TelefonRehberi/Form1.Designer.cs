@@ -32,6 +32,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnKayitOl = new System.Windows.Forms.Button();
             this.btnGiris = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
@@ -63,6 +64,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnKayitOl);
             this.groupBox2.Controls.Add(this.btnGiris);
             this.groupBox2.Controls.Add(this.txtSifre);
             this.groupBox2.Controls.Add(this.txtKullaniciAdi);
@@ -74,6 +76,16 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kullanıcı Giriş Bilgileri";
+            // 
+            // btnKayitOl
+            // 
+            this.btnKayitOl.Location = new System.Drawing.Point(31, 124);
+            this.btnKayitOl.Name = "btnKayitOl";
+            this.btnKayitOl.Size = new System.Drawing.Size(352, 23);
+            this.btnKayitOl.TabIndex = 3;
+            this.btnKayitOl.Text = "Yeni Kullanıcı Kayıt";
+            this.btnKayitOl.UseVisualStyleBackColor = true;
+            this.btnKayitOl.Click += new System.EventHandler(this.btnKayitOl_Click);
             // 
             // btnGiris
             // 
@@ -129,6 +141,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kullanıcı Giriş Ekranı";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -147,6 +160,7 @@
         private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnKayitOl;
     }
 }
 
